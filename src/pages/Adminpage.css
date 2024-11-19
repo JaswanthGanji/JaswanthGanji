@@ -1,0 +1,96 @@
+/* Main container for the Admin Page */
+.admin-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Vertically center the content */
+  align-items: center;      /* Horizontally center the content */
+  height: 100vh;            /* Full viewport height */
+  padding: 30px;
+  background: linear-gradient(135deg, rgb(255, 165, 199), #4ad0e2); /* Gradient background */
+  font-family: 'Roboto', sans-serif; /* Modern and clean font */
+  color: #fff; /* White text for contrast */
+  transition: all 0.3s ease; /* Smooth transition for hover and animations */
+}
+
+/* Heading style */
+h2 {
+  font-size: 2.5rem; /* Larger font size for prominence */
+  color: #fff; /* White color for heading */
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Slight shadow for a dynamic look */
+  letter-spacing: 3px; /* Add spacing between letters */
+  text-align: center; /* Center-align the heading */
+}
+
+/* User details box styling */
+.user-details {
+  text-align: center;
+  margin: 20px;
+  font-size: 1.2rem; /* Larger font size for better readability */
+  line-height: 2;    /* Increased line height for clarity */
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect for modern, dynamic feel */
+  padding: 25px;
+  border-radius: 12px; /* More rounded corners */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* Deeper shadow for a floating effect */
+  width: 80%;
+  max-width: 700px; /* Max width for better responsiveness */
+  margin: 15px auto; /* Center the content horizontally */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.user-details:hover {
+  transform: translateY(-5px); /* Slightly lift on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5); /* Stronger shadow for hover effect */
+}
+
+.user-details p {
+  margin: 15px 0;
+  font-weight: 500; /* Slightly lighter font for details */
+  color: #f0f0f0; /* Slightly lighter color for details for better contrast */
+  font-size: 1.4rem; /* Increase font size of individual details */
+}
+
+/* Logout button styling */
+.logout-btn {
+  margin-top: 40px;
+  background-color: #ff4747; /* Red background for attention */
+  color: #fff;
+  border: none;
+  padding: 18px 45px;
+  font-size: 1.3rem;
+  font-weight: 600; /* Make the font bold for better emphasis */
+  border-radius: 25px; /* Rounded button for modern look */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s ease; /* Smooth transition on hover */
+  text-transform: uppercase;
+}
+
+.logout-btn:hover {
+  background-color: #e11a1a; /* Darker red for hover effect */
+  transform: scale(1.05); /* Slight scale-up effect on hover */
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+  .admin-page-container {
+    padding: 20px;
+    background: linear-gradient(135deg, #ff5e62, #ff9966); /* Adjust gradient for mobile */
+  }
+
+  h2 {
+    font-size: 2.5rem; /* Slightly smaller heading on mobile */
+    margin-bottom: 25px;
+  }
+
+  .user-details {
+    width: 90%; /* Adjust width for better mobile responsiveness */
+    margin: 10px auto; /* Center on mobile */
+    padding: 20px;
+  }
+
+  .logout-btn {
+    padding: 14px 35px; /* Adjust button size for mobile */
+    font-size: 1.2rem; /* Slightly smaller text for mobile */
+  }
+}

@@ -1,0 +1,83 @@
+/* Overall Layout */
+.app-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main-content {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 250px; /* Sidebar width */
+    background-color: #f8f9fa;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding-top: 60px;
+    transition: left 0.3s ease-in-out;
+    z-index: 100;
+  }
+  
+  .content-area {
+    background-color: #e9e9e9;
+    transition: margin-left 0.3s ease-in-out; /* Smooth transition when sidebar hides/shows */
+  }
+
+  
+  
+  /* On Mobile Devices */
+  @media (max-width: 768px) {
+    .sidebar {
+      position: absolute;
+      left: -250px; /* Initially hide the sidebar */
+    }
+  
+    .sidebar-toggle-checkbox:checked ~ .sidebar {
+      left: 0; /* Show sidebar when the checkbox is checked (hamburger menu clicked) */
+    }
+  
+    .content-area {
+      margin-left: 0; /* Content area takes full width when sidebar is hidden */
+      padding: 10px; /* Less padding for mobile */
+    }
+  
+    .hamburger-menu {
+      display: block;
+      font-size: 30px;
+      cursor: pointer;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+  
+    /* Ensure the content area takes full width */
+    .content-area {
+      width: 100%;
+    }
+  }
+  
+  .app-container {
+    margin-top: 0; /* Ensure no margin at the top */
+  }
+  
+  /* Content area should also have no margin */
+  .content-area {
+    margin-top: 0; /* Remove margin from the content area */
+  }
+  
+  /* Remove any default margin from the header (if applicable) */
+  header {
+    margin-top: 0; /* Remove top margin of the header */
+    padding-top: 0; /* Remove top padding of the header */
+  }
+  
+  /* For the main content to take up full screen without space at the top */
+  .main-content {
+    margin-top: 0; /* Remove top margin */
+    padding-top: 0; /* Remove top padding */
+  }
+
+  

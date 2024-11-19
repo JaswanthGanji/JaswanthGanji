@@ -1,0 +1,80 @@
+/* Overall container for the About Us page */
+.aboutus-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* Heading Style */
+  .aboutus-heading {
+    font-size: 3rem;
+    color: #444;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  /* Content section with padding */
+  .aboutus-content {
+    line-height: 1.6;
+    font-size: 1.2rem;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  /* Subheading style */
+  .subheading {
+    font-size: 2rem;
+    margin-top: 30px;
+    color: #2c3e50;
+    text-decoration: underline;
+  }
+  
+  /* List styling for the "Why Choose Us?" section */
+  .why-choose-us {
+    margin-top: 20px;
+    padding-left: 20px;
+    list-style-type: none;
+  }
+  
+  .why-choose-us li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+  }
+  
+  /* Styling for strong text for emphasis */
+  strong {
+    color: #e74c3c;
+    font-weight: bold;
+  }
+  
+  /* Add some responsive styling for smaller screens */
+  @media (max-width: 768px) {
+    .aboutus-container {
+      padding: 20px;
+    }
+  
+    .aboutus-heading {
+      font-size: 2.5rem;
+    }
+  
+    .aboutus-content {
+      padding: 15px;
+    }
+  
+    .subheading {
+      font-size: 1.6rem;
+    }
+  
+    .why-choose-us {
+      padding-left: 15px;
+    }
+  }
+  

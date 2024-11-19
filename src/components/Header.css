@@ -1,0 +1,189 @@
+/* Header Background and Padding */
+.container-bg {
+    background-color: #ececec; /* Grey background */
+    padding: 10px 30px; /* Adjusted padding for better mobile experience */
+    height: 13vh; /* Set fixed height for the header */
+    min-height: 75px; /* Ensures the header height is at least 75px on small screens */
+    position: fixed; /* Make the header fixed */
+    top: 0; /* Pin it to the top */
+    left: 0; /* Ensure it stretches across the screen */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Make sure the header stays above the sidebar and content */
+}
+
+/* Ensure there is no space below the header */
+body {
+    padding-top: 12vh; /* Make sure the content below the header doesn't overlap */
+}
+
+.label-icon {
+    margin-right: 30px;
+}
+
+/* Icons Section Styling */
+.icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* User Icon */
+.user-icons {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Shopping Cart Icon */
+.shopping-icons {
+    padding-right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Shopping Cart Badge */
+.shopping-card {
+    opacity: 0.7;
+    color: #fff;
+    background: red;
+    width: 50%;
+    border-radius: 100%;
+    position: relative;
+    left: 19px;
+    top: -50px;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Login Button Styling */
+.login-btn {
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 10px;
+    height: fit-content;
+    width: fit-content;
+    border-width: 0px;
+    margin-top: 5px;
+}
+
+/* Mobile View - Hide Search Bar */
+@media (max-width: 768px) {
+    .search-bar-container {
+        display: none; /* Hide the search bar section entirely on mobile */
+    }
+}
+
+/* Desktop View (larger screens) - Show Search Bar and Icon */
+@media (min-width: 769px) {
+    .search-bar-container {
+        display: flex; /* Ensure search bar is shown on desktop */
+        gap: 10px; /* Add space between the input box and the search icon */
+        align-items: center; /* Vertically align the input and icon */
+    }
+
+    .search-bar-container input {
+        width: 300px; /* Adjust the width of the search input */
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #c5c3c3;
+        font-size: 16px;
+    }
+
+    .search-bar-container .search-icon {
+        font-size: 30px; /* Make the search icon visible and larger on desktop */
+        cursor: pointer;
+    }
+}
+@media (max-width: 768px) {
+    .container-bg {
+        padding: 10px 15px; /* Adjust padding for smaller screens */
+    }
+    
+    .user-icons, .shopping-icons {
+        font-size: 25px; /* Reduce icon sizes on mobile */
+    }
+
+    .login-btn {
+        font-size: 12px; /* Make the login button smaller on mobile */
+        padding: 8px;
+    }
+
+    .shopping-card {
+        font-size: 16px; /* Adjust shopping cart badge font size */
+        width: 40%;
+        left: 10px;
+        top: -45px;
+    }
+
+    /* Hide Search Bar and Search Icon on Mobile */
+    .input-box-border,
+    .search-icon {
+        display: none; /* Hide both the input box and the search icon on mobile */
+    }
+}
+
+/* Desktop View (larger screens) - Show Search Bar and Icon */
+@media (min-width: 769px) {
+    .d-flex {
+        gap: 5px; /* Add this to reduce the space between the input box and the search icon */
+    }
+
+    .input-box-border {
+        width: 100%; /* Ensure the input box is visible on desktop */
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #c5c3c3;
+    }
+
+    .search-icon {
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #c5c3c3;
+        font-size: 30px; /* Make the search icon visible and larger on desktop */
+        cursor: pointer;
+    }
+}
+
+/* Search Bar Container - Desktop View Only */
+.search-bar-container {
+    display: flex; /* Align the input and search icon horizontally */
+    align-items: center; /* Vertically align the input field and icon */
+    justify-content: center; /* Center the search bar container */
+}
+
+/* Search Input Field Styling */
+.search-bar-container input {
+    width: 300px; /* Adjust the width of the search input */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #c5c3c3;
+    font-size: 16px;
+}
+
+/* Search Icon Styling */
+.search-bar-container .search-icon {
+    font-size: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Center the icon vertically */
+}
+
+/* Mobile View - Hide the Search Bar Container */
+@media (max-width: 768px) {
+    .search-bar-container {
+        display: none; /* Hide the search bar on mobile devices */
+    }
+    .search-icon {
+        display: none; /* Hide the search bar on mobile devices */
+    }
+}
+
+/* Desktop View - Ensure Search Bar is Visible */
+@media (min-width: 769px) {
+    .search-bar-container {
+        display: flex; /* Show the search bar on desktop devices */
+    }
+}

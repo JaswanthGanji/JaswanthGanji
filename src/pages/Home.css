@@ -1,0 +1,90 @@
+/* Header Styling */
+h1 {
+  font-size: 28px; /* Adjust the font size */
+  padding-left: 25px; /* Add padding */
+  padding-top: 10px;
+  margin: 0; /* Remove default margin */
+  font-weight: bold; /* Make the title bold for better visibility */
+  color: #111; /* Darker color for the title */
+}
+
+/* Product List Grid */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid with dynamic column sizes */
+  gap: 15px; /* Increased gap between products */
+  padding: 20px;
+  box-sizing: border-box;
+  justify-items: center; /* Centers products */
+  grid-template-rows: auto; /* Allows automatic row height */
+}
+
+/* Container for each product item */
+.product-item {
+  background-color: white;
+  padding: 15px;
+  text-align: center; /* Centers the content */
+  margin: 2%; /* Adds a margin around each product */
+  width: calc(100% - 4%); /* Adjust width to account for margin */
+  border-radius: 8px; /* Slightly rounded corners for a smoother look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Hover effect */
+}
+
+.product-item:hover {
+  transform: translateY(-10px); /* Slightly lift the product on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+}
+
+/* Image Styling */
+.product-image {
+  width: 100%; /* Image takes full width of its container */
+  height: 200px; /* Fixed height for consistent image size */
+  object-fit: cover; /* Ensures the image fills the container without distorting */
+  border-radius: 4px; /* Rounded corners for images */
+  margin: 0; /* No margins */
+  transition: transform 0.3s ease-in-out; /* Smooth zoom-in effect on hover */
+}
+
+.product-item:hover .product-image {
+  transform: scale(1.05); /* Slight zoom-in effect on hover */
+}
+
+/* Product Title Styling */
+h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  font-weight: bold; /* Make title more prominent */
+  color: #333; /* Darker color for better readability */
+}
+
+/* Product Price and Description Styling */
+p {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #666; /* Lighter color for description text */
+}
+
+/* Price Styling */
+.price {
+  font-size: 1.2rem; /* Larger font size for price */
+  color: #e47911; /* Amazon orange-like color */
+  font-weight: bold; /* Make the price stand out */
+  margin-top: 10px;
+}
+
+/* Discount Badge Styling */
+.discount {
+  font-size: 1rem;
+  color: #d9534f; /* Red color for discount */
+  font-weight: bold;
+  margin-top: 5px;
+}
+/* Remove text underline from all links and text elements */
+a {
+  text-decoration: none; /* Removes underline from links */
+}
+
+.product-item h3, .product-item p {
+  text-decoration: none; /* Ensures no underline on product titles and descriptions */
+}

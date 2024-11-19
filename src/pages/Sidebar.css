@@ -1,0 +1,88 @@
+/* Sidebar styles */
+.sidebar {
+  width: 250px;
+  background-color: #f8f9fa;
+  position: fixed;
+  top: 60px;
+  left: -250px; /* Sidebar starts off-screen */
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  transition: left 0.3s ease-in-out;
+  z-index: 999;
+  cursor: pointer;
+}
+
+/* Sidebar Heading */
+.sidebar-heading {
+  font-size: 25px;
+  color: black;
+  padding: 20px;
+}
+
+/* Sidebar links container */
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sidebar individual link styles */
+.sidebar-link {
+  padding: 12px 20px;
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+}
+
+/* Sidebar link hover effect */
+.sidebar-link:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Active link styling */
+.sidebar-link.active {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Category dropdown menu styling */
+.sidebar-dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+.sidebar-dropdown-menu .sidebar-link {
+  padding: 8px 20px;
+  font-size: 16px;
+}
+
+/* Smooth transition for category dropdown */
+.sidebar-dropdown-menu {
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .sidebar {
+    left: -250px; /* Sidebar hidden initially on mobile */
+  }
+  
+  /* Show sidebar when 'show' class is added */
+  .sidebar.show {
+    left: 0; /* Sidebar shown */
+  }
+}
+
+/* Sidebar visible when 'active' class is added */
+.sidebar.active {
+  left: 0; /* Sidebar visible */
+}
+
+/* Toggle button (hamburger icon) styles */
+.label-icon {
+  font-size: 30px;
+  cursor: pointer;
+}
